@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -22,7 +27,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+p {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
 }
 html {
   scroll-behavior: smooth;
