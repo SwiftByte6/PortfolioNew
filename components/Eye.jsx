@@ -12,16 +12,12 @@ const Eye = ({ x, y }) => {
     const rect = eye.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-
     const dx = x - centerX;
     const dy = y - centerY;
-
     const angle = Math.atan2(dy, dx);
     const radius = 40; 
-
     const moveX = Math.cos(angle) * radius;
     const moveY = Math.sin(angle) * radius;
-
     setPupilPos({ x: moveX, y: moveY });
   }, [x, y]);
 
@@ -38,8 +34,7 @@ const Eye = ({ x, y }) => {
             transform: `translate(${pupilPos.x}px, ${pupilPos.y}px)`,
           }}
         >
-          <div className="bg-white h-6 w-6 rounded-full m-auto mt-[15px]" />
-        </div>
+          <div className="bg-white h-6 w-6 rounded-full m-auto mt-[15px]"/></div>
 
       </div>
       <div
@@ -53,8 +48,7 @@ const Eye = ({ x, y }) => {
             transform: `translate(${pupilPos.x}px, ${pupilPos.y}px)`,
           }}
         >
-          <div className="bg-white h-6 w-6 rounded-full m-auto mt-[15px]" />
-        </div>
+          <div className="bg-white h-6 w-6 rounded-full m-auto mt-[15px]" /> </div>
 
       </div>
     </div>
