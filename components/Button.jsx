@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Button = ({value}) => {
+const Button = ({value,routeLink}) => {
     return (
         <div>
-            <button
+            <a href={`${routeLink}`}>
+              <button
+              
                 className="relative cursor-pointer rounded-2xl p-[2px] mt-10 w-fit mx-auto 
              bg-[radial-gradient(circle_80px_at_80%_-10%,#ffffff,#181b1b)]">
 
@@ -31,6 +33,7 @@ const Button = ({value}) => {
                     <span className="relative z-10 text-xl">{value}</span>
                 </div>
             </button>
+            </a>
         </div>
     )
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import ProjectButton from './ProjectButton'
+import { InteractiveHoverButton } from './magicui/interactive-hover-button';
 
 const Projects = () => {
   const projects = [
@@ -13,22 +15,36 @@ const Projects = () => {
       name: "KuroCLI",
       image: "/Kuro.png",
       description: "A command-line tool to scaffold modern React/Tailwind projects instantly with plug-and-play architecture.",
-      techStack: ["Node.js", "Inquirer", "ShellJS"],
-      liveSite: "https://npmjs.com/package/kurocli"
+      techStack: ["TailwindCSS", "NextJs"],
+      liveSite: "https://kurocli.netlify.app"
     },
     {
       name: "Expense Tracker",
       image: "/Tracker.png",
       description: "A personal finance tracker to monitor income, expenses, and generate monthly spending insights.",
       techStack: ["React", "Chart.js", "TailwindCSS"],
-      liveSite: "https://expensetracker.rohit.vercel.app"
+      liveSite: "https://tried1-swiftbyte6s-projects.vercel.app/expense"
+    },
+    {
+      name: "Ekotex",
+      image: "/Ekotex.png",
+      description: "An e-commerce platform for sustainable fashion and eco-friendly products, empowering conscious consumerism.",
+      techStack: ["Next.js", "TailwindCSS"],
+      liveSite: "https://www.ekotexelectrificient.com/"
+    },
+    {
+      name: "GlobalElevate",
+      image: "/Global.png",
+      description: "A global mentorship and networking platform connecting students and professionals across borders.",
+      techStack: ["Next.js", "TailwindCSS"],
+      liveSite: "https://theglobalelevate.com"
     }
   ];
 
   return (
     <section
-    id='projects'
-    className="px-6 md:px-42 py-12">
+      id='projects'
+      className="px-6 md:px-42 py-12">
       <h1 className="text-5xl sm:text-6xl text-center font-sora font-semibold bg-gradient-to-b from-white to-white/10 bg-clip-text text-transparent">
         Some of my Works
       </h1>
@@ -66,9 +82,9 @@ const Projects = () => {
                 href={project.liveSite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-sm text-blue-400 hover:underline"
+                className="inline-block mt-4 text-sm  hover:underline"
               >
-                View Live →
+                <InteractiveHoverButton>View Live Link</InteractiveHoverButton>
               </a>
             </div>
           </div>

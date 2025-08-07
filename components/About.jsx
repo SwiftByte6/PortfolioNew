@@ -28,7 +28,7 @@ export default function AboutUs() {
       onMouseMove={handleMouseMove}
       className="min-h-screen p-2 sm:p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl text-center font-sora font-semibold bg-gradient-to-b from-white to-white/10 bg-clip-text text-transparent">
+        <h1 className="text-5xl sm:text-6xl text-center font-sora font-semibold mb-10 bg-gradient-to-b from-white to-white/10 bg-clip-text text-transparent">
           About Me
         </h1>
         {/* Responsive Grid Container */}

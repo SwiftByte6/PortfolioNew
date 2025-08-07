@@ -31,19 +31,22 @@ const Navbar = () => {
     ];
 
     return (
-        <motion.nav 
-        initial={{y:-100,opacity:0}}
-        animate={{y:0,opacity:1}}
-        transition={{duration:0.7,ease:easeIn}}
+        <motion.nav
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: easeIn }}
 
-        className='fixed w-full mx-auto z-50'>
-            <div className={`${scrolled ? "w-[90%] md:w-[50%] bg-white/7 backdrop-blur-2xl md:px-10 " : "md:w-[95%] w-full"} mx-auto p-3 py-6 border-b border-white transition-all duration-500 ease-in flex justify-between items-center`}>
-                <div className='font-bold text-2xl'>Rohit</div>
-                
+            className='fixed w-full mx-auto z-50'>
+            <div className={`${scrolled ? "w-[90%] md:w-[50%] bg-white/7 backdrop-blur-2xl md:px-10 rounded-2xl " : "md:w-[95%] w-full border-white border-b "} mx-auto p-3 py-6  transition-all duration-500 ease-in flex justify-between items-center`}>
+                <div className="font-extrabold text-3xl bg-gradient-to-r from-gray-300 via-gray-400 to-gray-200 bg-clip-text text-transparent tracking-wide">
+                    Rohit
+                </div>
+
+
                 <ul className='md:flex hidden gap-10 text-xl'>
                     {NavList.map((item, index) => (
                         <li key={index} className='flex items-center gap-2 cursor-pointer'>
-                            <a href={`#${item.id}`} className='flex items-center gap-2'>
+                            <a href={`#${item.id}`} className='flex items-center gap-2 text-white'>
                                 {item.icons}
                                 <span>{scrolled ? "" : item.heading}</span>
                             </a>
@@ -52,25 +55,48 @@ const Navbar = () => {
                 </ul>
 
                 <div className='hidden md:flex gap-3'>
-                    <div className='w-[40px] h-[40px] border border-white rounded-full flex justify-center items-center'><FaMoon className='text-white text-2xl'/></div>
-                    <div className='w-[40px] h-[40px] border border-white rounded-full flex justify-center items-center'><IoMdMail className='text-white text-2xl'/></div>
+                    {/* <div className='w-[40px] h-[40px] border border-white rounded-full flex justify-center items-center'><FaMoon className='text-white text-2xl' /></div> */}
+                    <a
+                        href="/resume.pdf" // make sure resume.pdf is placed in your public folder
+                        download
+                        className="relative group px-4 py-2 rounded-full text-white font-semibold overflow-hidden border border-white transition-all duration-300 ease-in-out"
+                    >
+                        {/* Expanding Circle on Hover */}
+                        <span className="absolute inset-0 bg-white scale-0 group-hover:scale-125 rounded-full transition-transform duration-300 ease-in-out"></span>
 
+                        {/* Button Text */}
+                        <span className="relative z-10 text-white group-hover:text-black">
+                            Resume
+                        </span>
+                    </a>
                 </div>
 
-                <div className='md:hidden' onClick={() => setIsOpen(!isOpen)}>
+                <div className='md:hidden text-white' onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <IoMdClose size={40} /> : <IoReorderThreeOutline size={45} />}
                 </div>
             </div>
 
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "opacity-100" : "max-h-0 opacity-0"} w-full`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out bg-black ${isOpen ? "opacity-100" : "max-h-0 opacity-0"} w-full`}>
                 <div className="p-4">
                     {NavList.map((item, i) => (
-                        <a key={i} href={`#${item.id}`} className='flex gap-3 items-center my-5 hover:bg-white/20 p-3 rounded-2xl cursor-pointer'>
+                        <a key={i} href={`#${item.id}`} className='flex gap-3 text-white  items-center my-5 hover:bg-white/20 p-3 rounded-2xl cursor-pointer'>
                             <div className='text-2xl'>{item.icons}</div>
                             <div className='text-2xl'>{item.heading}</div>
                         </a>
                     ))}
-                    <button className='w-full h-10 mt-4 bg-white rounded-xl'></button>
+                     <a
+                        href="/resume.pdf" // make sure resume.pdf is placed in your public folder
+                        download
+                        className="relative group px-4 py-2 rounded-full text-white font-semibold overflow-hidden border border-white transition-all duration-300 ease-in-out"
+                    >
+                        {/* Expanding Circle on Hover */}
+                        <span className="absolute inset-0 bg-white scale-0 group-hover:scale-125 rounded-full transition-transform duration-300 ease-in-out"></span>
+
+                        {/* Button Text */}
+                        <span className="relative z-10 text-white group-hover:text-black">
+                            Resume
+                        </span>
+                    </a>
                 </div>
             </div>
         </motion.nav>

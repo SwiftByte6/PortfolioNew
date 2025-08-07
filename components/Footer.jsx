@@ -3,7 +3,7 @@ import { Mail, Github, Linkedin } from 'lucide-react'; // Optional: install luci
 
 const Footer = () => {
   return (
-    <footer className="bg-white/5 backdrop-blur-md border-t border-white/10 text-white py-10 px-6 mt-20">
+    <footer className="bg-[#121212] backdrop-blur-md border-t border-white/10 text-white py-10 px-6 mt-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
         
         {/* Personal Branding */}
@@ -31,15 +31,15 @@ const Footer = () => {
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
               <Mail size={16} /> 
-              <a href="mailto:your@email.com" className="hover:text-blue-400 transition">your@email.com</a>
+              <a href="mailto:rohitsoneji6@email.com" className="hover:text-blue-400 transition">rohitsoneji6@email.com</a>
             </li>
             <li className="flex items-center gap-2">
               <Github size={16} /> 
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">GitHub</a>
+              <a href="https://github.com/SwiftByte6" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">GitHub</a>
             </li>
             <li className="flex items-center gap-2">
               <Linkedin size={16} /> 
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/rohit-soneji-9483a5344/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">LinkedIn</a>
             </li>
           </ul>
         </div>

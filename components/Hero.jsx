@@ -2,8 +2,9 @@
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
-// Ensure framer-motion is installed and up to date. If you still get errors, try deleting node_modules and reinstalling.
+
 import { motion } from 'framer-motion'
+import { TextScroll } from './ui/text-scroll'
 
 
 
@@ -11,7 +12,7 @@ const Hero = () => {
     return (
         <div 
         id='home'
-        className="h-screen w-full flex items-center justify-center text-center px-4 relative">
+        className="h-screen w-full flex flex-col items-center justify-center text-center px-4 relative">
         
             <div className="flex flex-col items-center justify-center gap-6 w-full max-w-4xl">
                 
@@ -50,10 +51,20 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7,delay:0.7 }}
                 className="flex flex-wrap gap-4 justify-center mt-6">
-                    <Button value="View Projects" />
-                    <Button value="Contact me" />
+                    <Button value="View Projects" routeLink={'#projects'}/>
+                    <Button value="Contact me"  routeLink={'#contact'} />
                 </motion.div>
             </div>
+            <TextScroll
+  text="Full Stack Developer"
+  default_velocity={1.5}
+  className="text-center tracking-tight leading-tight
+             text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+             bg-gradient-to-b from-white to-white/10
+             bg-clip-text text-transparent font-extrabold
+             mt-10 px-4"
+/>
+
         </div>
     )
 }

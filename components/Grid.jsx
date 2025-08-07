@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 
 const Grid = () => {
   return (
-    <section className="w-full px-4 py-12">
+    <section className="w-full px-4 py-12 ">
       <div className="grid grid-cols-1 sm:grid-cols-6 grid-rows-7 gap-4 max-w-7xl mx-auto">
 
         {/* 1. About Me */}
