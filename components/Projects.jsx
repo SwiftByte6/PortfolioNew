@@ -38,14 +38,7 @@ const Projects = () => {
       image: "/Cesa.png",
       description: "A committee website for CESA 2025, showcasing event details, member profiles, and registration functionalities.",
       techStack: ["Next.js", "TailwindCSS"],
-      liveSite: "https://cesa2025-lwym.vercel.app/m"
-    },
-    {
-      name: "Ecommerce Platform",
-      image: "/Women.png",
-      description: "An e-commerce platform for sustainable fashion and eco-friendly products, empowering conscious consumerism.",
-      techStack: ["Next.js", "TailwindCSS", "Razorpay", "Supabase","redux","resender"],
-      liveSite: "https://faveee.netlify.app"
+      liveSite: "https://cesa2025-lwym.vercel.app/"
     },
         {
       name: "Expense Tracker",
