@@ -34,3 +34,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Mail / Contact setup
+
+This project includes a server API route at `app/api/contact/route.js` which sends incoming contact form submissions via SMTP using Nodemailer. It requires the following environment variables (do NOT commit secrets to the repo):
+
+- `SMTP_HOST` - your SMTP host (e.g. smtp.gmail.com)
+- `SMTP_PORT` - SMTP port (465 for SSL or 587 for TLS)
+- `SMTP_USER` - SMTP username (the account/email to authenticate)
+- `SMTP_PASS` - SMTP password or app-specific password
+- `TO_EMAIL` (optional) - destination email address; defaults to `SMTP_USER` if not set
+
+Put these into a `.env.local` file at the project root when developing locally. Example:
+
+```env
+SMTP_HOST=smtp.example.com
+SMTP_PORT=465
+SMTP_USER=you@example.com
+SMTP_PASS=yourpassword
+TO_EMAIL=me@example.com
+```
+
+Quick test: start the dev server (`npm run dev`) and POST to the endpoint:
+
+```bash
+curl -X POST http://localhost:3000/api/contact -H "Content-Type: application/json" -d '{"name":"Test","email":"test@example.com","message":"Hello"}'
+```
+
+If configured correctly the endpoint will return a 200 response and your SMTP account will send the email. If you're using Gmail, you may need an app password or enable less secure access depending on your account settings.

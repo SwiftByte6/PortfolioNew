@@ -18,13 +18,7 @@ const Projects = () => {
       techStack: ["TailwindCSS", "NextJs"],
       liveSite: "https://kurocli.netlify.app"
     },
-    {
-      name: "Expense Tracker",
-      image: "/Tracker.png",
-      description: "A personal finance tracker to monitor income, expenses, and generate monthly spending insights.",
-      techStack: ["React", "Chart.js", "TailwindCSS"],
-      liveSite: "https://tried1-swiftbyte6s-projects.vercel.app/expense"
-    },
+,
     {
       name: "Ekotex",
       image: "/Ekotex.png",
@@ -38,6 +32,27 @@ const Projects = () => {
       description: "A global mentorship and networking platform connecting students and professionals across borders.",
       techStack: ["Next.js", "TailwindCSS"],
       liveSite: "https://theglobalelevate.com"
+    },
+    {
+      name: "Cesa Commitee",
+      image: "/Cesa.png",
+      description: "A committee website for CESA 2025, showcasing event details, member profiles, and registration functionalities.",
+      techStack: ["Next.js", "TailwindCSS"],
+      liveSite: "https://cesa2025-lwym.vercel.app/m"
+    },
+    {
+      name: "Ecommerce Platform",
+      image: "/Women.png",
+      description: "An e-commerce platform for sustainable fashion and eco-friendly products, empowering conscious consumerism.",
+      techStack: ["Next.js", "TailwindCSS", "Razorpay", "Supabase","redux","resender"],
+      liveSite: "https://faveee.netlify.app"
+    },
+        {
+      name: "Expense Tracker",
+      image: "/Tracker.png",
+      description: "A personal finance tracker to monitor income, expenses, and generate monthly spending insights.",
+      techStack: ["React", "Chart.js", "TailwindCSS"],
+      liveSite: "https://tried1-swiftbyte6s-projects.vercel.app/expense"
     }
   ];
 
@@ -53,9 +68,9 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="w-full max-w-[450px] h-[480px] bg-white/10 border border-white/10 rounded-2xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-xl"
+            className="w-full max-w-[450px] h-auto bg-white/10 border border-white/10 rounded-2xl shadow-lg backdrop-blur-md hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-xl"
           >
-            <div className="h-[57%] overflow-hidden rounded-t-2xl">
+            <div className="h-[250px] overflow-hidden rounded-t-2xl">
               <img
                 src={project.image}
                 alt={project.name}

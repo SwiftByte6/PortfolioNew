@@ -85,7 +85,8 @@ export default function AboutUs() {
             <Eye x={coordinate.x} y={coordinate.y} />
           </div>
 
-          {/* Bottom-right: Tech Stack Marquee */}
+       
+          {/* Bottom-left: Contact Me Teaser */}
           <div className="bg-black/40 backdrop-blur-md border border-gray-600/30 rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-gray-500/20 col-span-1 row-span-1 sm:col-span-2 sm:row-span-5 sm:col-start-5 sm:row-start-3">
             <div className="h-full flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-2">
@@ -105,10 +106,25 @@ export default function AboutUs() {
                   Let's Chat
                 </button>
               </div>
+                {/* Past Experience subsection (placeholder logo & dates) */}
+                <div className="mt-6 pt-4 border-t border-gray-600/20">
+                  <h4 className="text-lg font-semibold text-gray-100">Past Experience</h4>
+                  <div className="flex items-center gap-3 mt-3">
+                    <div className="w-12 h-12  rounded-md flex items-center justify-center overflow-hidden">
+                      {/* Placeholder image - add your logo to public/auraasyncc-logo.png */}
+                      <img src="/auraasync.ico" alt="auraasyncc.in logo (add later)" className="w-full h-full object-contain" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-gray-100 font-medium">auraasyncc.in</div>
+                      <div className="text-xs text-gray-400">Role: Intern</div>
+                      <div className="text-xs text-gray-400">Duration: 2 weeks — October</div>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
 
-          {/* Bottom-left: Contact Me Teaser */}
+             {/* Bottom-right: Tech Stack Marquee */}
           <div className="bg-black/40 backdrop-blur-md border border-gray-600/30 rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-gray-500/20 col-span-1 row-span-1 sm:col-span-4 sm:row-span-3 sm:col-start-1 sm:row-start-5 mt-0">
             <div className="h-full flex flex-col">
               <div className="p-4 border-b border-gray-600/30">
