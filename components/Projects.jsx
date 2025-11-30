@@ -4,6 +4,13 @@ import { InteractiveHoverButton } from './magicui/interactive-hover-button';
 
 const Projects = () => {
   const projects = [
+     {
+      name: "Cesa Commitee",
+      image: "/Cesa.png",
+      description: "A committee website for CESA 2025, showcasing event details, member profiles, and registration functionalities.",
+      techStack: ["Next.js", "TailwindCSS"],
+      liveSite: "https://cesa2025-lwym.vercel.app/"
+    },
     {
       name: "HostelPe",
       image: "/Hostel.png",
@@ -11,14 +18,22 @@ const Projects = () => {
       techStack: ["Next.js", "TailwindCSS", "Supabase", "MySQL"],
       liveSite: "https://hostelpe.in"
     },
+    
     {
-      name: "KuroCLI",
-      image: "/Kuro.png",
-      description: "A command-line tool to scaffold modern React/Tailwind projects instantly with plug-and-play architecture.",
-      techStack: ["TailwindCSS", "NextJs"],
-      liveSite: "https://kurocli.netlify.app"
+      name: "Favee.shop",
+      image: "/Favee.png",
+      description: "A modern women's ecommerce platform offering curated fashion, beauty, and lifestyle products with seamless shopping experience.",
+      techStack: ["Next.js", "TailwindCSS", "Razorpay", "Supabase"],
+      liveSite: "https://favee.shop",
+      status: "In Process"
     },
-,
+    {
+      name: "AuraAsync",
+      image: "/aura.png",
+      description: "An AI-inspired fashion brand that leverages machine learning to create personalized style recommendations and trend predictions.",
+      techStack: ["Next.js", "AI/ML", "TailwindCSS", "Python"],
+      liveSite: "https://auraasync.in"
+    },
     {
       name: "Ekotex",
       image: "/Ekotex.png",
@@ -34,19 +49,13 @@ const Projects = () => {
       liveSite: "https://theglobalelevate.com"
     },
     {
-      name: "Cesa Commitee",
-      image: "/Cesa.png",
-      description: "A committee website for CESA 2025, showcasing event details, member profiles, and registration functionalities.",
-      techStack: ["Next.js", "TailwindCSS"],
-      liveSite: "https://cesa2025-lwym.vercel.app/"
-    },
-        {
-      name: "Expense Tracker",
-      image: "/Tracker.png",
-      description: "A personal finance tracker to monitor income, expenses, and generate monthly spending insights.",
-      techStack: ["React", "Chart.js", "TailwindCSS"],
-      liveSite: "https://tried1-swiftbyte6s-projects.vercel.app/expense"
+      name: "KuroCLI",
+      image: "/Kuro.png",
+      description: "A command-line tool to scaffold modern React/Tailwind projects instantly with plug-and-play architecture.",
+      techStack: ["TailwindCSS", "NextJs"],
+      liveSite: "https://kurocli.netlify.app"
     }
+   
   ];
 
   return (
@@ -86,14 +95,21 @@ const Projects = () => {
                 ))}
               </ul>
 
-              <a
-                href={project.liveSite}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-sm  hover:underline"
-              >
-                <InteractiveHoverButton>View Live Link</InteractiveHoverButton>
-              </a>
+              <div className="flex justify-between items-center mt-4">
+                <a
+                  href={project.liveSite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:underline"
+                >
+                  <InteractiveHoverButton>View Live Link</InteractiveHoverButton>
+                </a>
+                {project.status && (
+                  <span className="text-xs bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded border border-yellow-500/30">
+                    {project.status}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         ))}
